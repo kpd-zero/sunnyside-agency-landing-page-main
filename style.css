@@ -17,6 +17,8 @@
     --font-fraunces: 'Fraunces', serif;
 }
 
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Media Query %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 @media (max-width: 768px) {
    .pictures-section {
         grid-template-columns: repeat(1, 1fr) !important;
@@ -26,9 +28,11 @@
 @media (max-width: 1024px) {
     
 }
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Media Query %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 
 body {
+    background-color: #fffbf8;
     font-family: var(--font-barlow);
     margin: 0;
 }
@@ -45,10 +49,7 @@ li {
     padding-right: 1em;
 }
 
-.flex-grow {
-    flex-grow: 1;
-}
-
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Menu Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .nav {
     position: absolute;
     top: 0;
@@ -70,11 +71,11 @@ li {
 }
 
 .btn-contact {
-    background-color: rgba(255,255,255,0.3);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--desaturated-blue);
     text-transform: uppercase;
     font-family: var(--font-fraunces);
-    border: 3px solid transparent;
+    border: none;
     padding: 1em 2em 1em 2em;
     border-radius: 30px;
     outline: none;
@@ -83,15 +84,14 @@ li {
 }
 
 .btn-contact:hover {
-    background-color: transparent;
-    border: 3px solid var(--white);
+    color: var(--white);
+    background-color: rgba(255,255,255,0.3);
     outline: none;
+    border: none;
 }
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Menu Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
-.btn-contact:focus {
-    outline: none;
-}
-
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .hero-section {
     background-image: url(/images/desktop/image-header.jpg);
     background-position: center;
@@ -114,6 +114,25 @@ li {
 .hero-section img {
     padding-bottom: 15rem;
 }
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pictures 1 Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.pictures-section h2 {
+    font-family: var(--font-fraunces);
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    font-size: 42px;
+    margin: 0;
+}
+
+.pictures-section p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 1.6rem;
+    font-family: var(--font-barlow);
+    color: var(--dark-grayish-blue);
+}
 
 .pictures-section {
     display: grid;
@@ -121,18 +140,10 @@ li {
 }
 
 .picture-grid-item {
-    height: 550px;
-}
-
-h2 {
-    font-family: var(--font-fraunces);
-    color: var(--desaturated-blue);
-    font-weight: 900;
-}
-
-p {
-    font-family: var(--font-barlow);
-    color: var(--dark-grayish-blue);
+    min-height: 550px;
+    max-height: 550px;
+    background-size: cover;
+    background-position-x: center;
 }
 
 .picture-grid-item a {
@@ -141,28 +152,258 @@ p {
     color: var(--desaturated-blue);
     font-weight: 900;
     text-transform: uppercase;
+    position: relative;
 }
 
-.item2 {
+.picture-grid-item a::after{
+    content: '';
+    height:10px;
+    border-radius: 10px;
+    z-index: -1;
+    width: 120%;
+    position: absolute;
+    left:calc(0% - 10%);
+    bottom: 0px;
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.picture-grid-item a:hover::after{
+    opacity: 1;
+}
+
+.item1 a::after{
+   background-color: var(--yellow);
+}
+
+.item4 a::after{
+    background-color: var(--soft-red);
+ }
+
+.pictures-section .item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.pictures-section .item1 > * {
+    align-self: flex-start;
+}
+
+.pictures-section .item2 {
     background-image: url('/images/desktop/image-transform.jpg');
-    background-size: cover;
-    background-position-x: center;
 }
 
-.item3 {
+.pictures-section .item3 {
     background-image: url('/images/desktop/image-stand-out.jpg');
-    background-size: cover;
-    background-position-x: center;
 }
 
-.item5 {
+.pictures-section .item4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.pictures-section .item4 > * {
+    align-self: flex-start;
+}
+
+.pictures-section .item5 {
     background-image: url('/images/desktop/image-graphic-design.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: center;
+}
+
+.pictures-section .item5 > * {
+    align-self: center;
+    text-align: center;
+    width: 50%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pictures-section .item6 {
+    background-image: url('/images/desktop/image-photography.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: center;
+}
+
+.pictures-section .item6 > * {
+    align-self: center;
+    text-align: center;
+    width: 50%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pictures-section .item5 h3 {
+    font-family: var(--font-fraunces);
+    color: var(--dark-cyan);
+    font-size: 32px;
+}
+
+.pictures-section .item6 h3 {
+    font-family: var(--font-fraunces);
+    color: var(--dark-blue);
+    font-size: 32px;
+}
+
+.pictures-section .item5 p {
+    color: var(--dark-cyan);
+}
+
+.pictures-section .item6 p {
+    color: var(--dark-blue);
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Pictures 1 Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Testimonials Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.testimonials-section h2 {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    font-family: var(--font-fraunces);
+    color: var(--grayish-blue);
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+.testimonials-flex {
+    display: flex;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+.testimonials-item {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grayish-blue);
+}
+.testimonials-item img {
+    margin-bottom: 3rem;
+    width: 70px;
+    border-radius: 35px;
+}
+.testimonials-item p {
+    color: var(--very-dark-grayish-blue);
+    text-align: center;
+    line-height: 1.6rem;
+    height: 5rem;
+}
+
+.testimonials-item span {
+    margin-top: 3rem;
+    font-weight: 900;
+    font-family: var(--font-fraunces);
+    color: var(--desaturated-blue);
+}
+
+.p-small {
+    color: var(--grayish-blue);
+    font-size: 14px;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Testimonials Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pictures 2 Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.pictures2-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pictures2-item {
+    height: 400px;
     background-size: cover;
     background-position-x: center;
 }
 
-.item6 {
-    background-image: url('/images/desktop/image-photography.jpg');
-    background-size: cover;
-    background-position-x: center;
+.pictures2-section .item1{
+    background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
 }
+
+.pictures2-section .item2{
+    background-image: url(/images/desktop/image-gallery-orange.jpg);
+}
+
+.pictures2-section .item3{
+    background-image: url(/images/desktop/image-gallery-cone.jpg);
+}
+
+.pictures2-section .item4{
+    background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Pictures 2 Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Footer Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.footer {
+    background-color: #90d4c5;
+    padding-top: 5rem;
+    font-size: 11px; 
+    text-align: center;
+    font-family: var(--font-barlow);
+    color: var(--dark-moderate-cyan);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sunnyside-logo {
+    fill: var(--dark-moderate-cyan);
+}
+
+.footer > * {
+    align-self: center;
+}
+
+.footer p > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.footer .p-socials > * {
+    font-size: 18px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.footer ul {
+    justify-content: center;
+    margin: 0;
+}
+
+.footer li{
+    padding: 0;
+}
+
+.footer a { 
+    color: var(--dark-moderate-cyan);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer a:hover { 
+    color: var(--white);
+    text-decoration: none;
+}
+
+.attribution {
+    justify-content: center;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Footer Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
