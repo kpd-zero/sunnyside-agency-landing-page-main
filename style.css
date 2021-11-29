@@ -222,7 +222,7 @@ body {
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .hero-section {
-    background-image: url(images/desktop/image-header.jpg);
+    background-image: url(./images/desktop/image-header.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
