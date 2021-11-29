@@ -222,7 +222,7 @@ body {
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .hero-section {
-    background-image: url(https://github.com/kpd-zero/sunnyside-agency-landing-page-main/blob/gh-pages/images/desktop/image-header.jpg?raw=true);
+    background-image: url(./images/desktop/image-header.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
