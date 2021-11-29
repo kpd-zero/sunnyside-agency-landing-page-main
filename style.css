@@ -222,7 +222,7 @@ body {
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .hero-section {
-    background-image: url(/images/desktop/image-header.jpg);
+    background-image: url(images/desktop/image-header.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -323,11 +323,11 @@ body {
 }
 
 .pictures-section .item2 {
-    background-image: url('/images/desktop/image-transform.jpg');
+    background-image: url('images/desktop/image-transform.jpg');
 }
 
 .pictures-section .item3 {
-    background-image: url('/images/desktop/image-stand-out.jpg');
+    background-image: url('images/desktop/image-stand-out.jpg');
 }
 
 .pictures-section .item4 {
@@ -343,7 +343,7 @@ body {
 }
 
 .pictures-section .item5 {
-    background-image: url('/images/desktop/image-graphic-design.jpg');
+    background-image: url('images/desktop/image-graphic-design.jpg');
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -359,7 +359,7 @@ body {
 }
 
 .pictures-section .item6 {
-    background-image: url('/images/desktop/image-photography.jpg');
+    background-image: url('images/desktop/image-photography.jpg');
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -462,19 +462,19 @@ body {
 }
 
 .pictures2-section .item1{
-    background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+    background-image: url('images/desktop/image-gallery-milkbottles.jpg');
 }
 
 .pictures2-section .item2{
-    background-image: url(/images/desktop/image-gallery-orange.jpg);
+    background-image: url(images/desktop/image-gallery-orange.jpg);
 }
 
 .pictures2-section .item3{
-    background-image: url(/images/desktop/image-gallery-cone.jpg);
+    background-image: url(images/desktop/image-gallery-cone.jpg);
 }
 
 .pictures2-section .item4{
-    background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+    background-image: url(images/desktop/image-gallery-sugarcubes.jpg);
 }
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Pictures 2 Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
