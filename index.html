@@ -14,22 +14,26 @@
 <body>
   <!-- ////////////////////////// Header Section ////////////////////////// -->
     <div class="nav">
+      <div class="nav-small">
       <div class="nav-brand">
         <img src="/images/logo.svg" alt="">
       </div>
-      <!-- <div class="toggle-btn">
-        <img src="/images/icon-hamburger.svg" alt="">
-      </div> -->
-      <div>
-        <ul>
+        <button class="toggle-btn">
+          <img src="/images/icon-hamburger.svg" alt="">
+        </button>
+        </div>
+
+        <ul class="collapse">
+          <li class="triangle"></li>
+          <li class="hidden"></li>
           <li><a href="">About</a></li>
           <li><a href="">Services</a></li>
           <li><a href="">Projects</a></li>
           <li><button class="btn-contact">
                 Contact
             </button></li>
+            <li class="hidden"></li>
         </ul>
-      </div>
     </div>
   <!-- ////////////////////////// End of Header Section ////////////////////////// -->
 
@@ -124,9 +128,6 @@
     <a href=""><i class="bi bi-pinterest"></i></a>
   </p>
     
-  
-  
-  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -135,5 +136,6 @@
 </div>
   <!-- ////////////////////////// End of Footer Section ////////////////////////// -->
 
+  <script src="main.js"></script>
 </body>
 </html>

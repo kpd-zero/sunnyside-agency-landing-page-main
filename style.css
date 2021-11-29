@@ -20,12 +20,133 @@
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Media Query %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 @media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 42px !important;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .collapse {
+        max-height: 0px;
+        overflow-y: hidden;
+    }
+    .triangle {
+        padding-top: 0 !important;
+        width: 0;
+      height: 0;
+      border-bottom: 25px solid #fffbf8;
+      border-left: 25px solid transparent;
+      background-color: transparent;
+      align-self: flex-end;
+    }
+    .nav-brand {
+        padding: 0 !important;
+        
+    }
+    .nav-small {
+        height: 4rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    
+    .active {
+        max-height: auto !important;
+        overflow-y: visible !important;
+    }
+
+    ul {
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        width: 100%;
+    }
+
+    li {
+        background-color: #fffbf8;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav a {
+        color: var(--dark-grayish-blue) !important;
+    }
+
+    .btn-contact {
+        background-color: var(--yellow) !important;
+    }
    .pictures-section {
         grid-template-columns: repeat(1, 1fr) !important;
     }
+
+    .pictures-section .item2 {
+        order: -1 !important;
+    }
+
+    .nav {
+        flex-direction: column !important;
+        width: 90% !important;
+        margin-left: 5%;
+    }
+
+    .pictures-section .item1 > * {
+        align-self: center !important;
+        text-align: center;
+    }
+
+    .pictures-section .item4 > * {
+        align-self: center !important;
+        text-align: center;
+    }
+
+    .testimonials-flex {
+        flex-direction: column;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .testimonials-section h2 {
+        margin-top: 4rem !important;
+    }
+
+    .testimonials-item span {
+        margin-top: 1rem !important;
+    }
+
+    .testimonials-item img {
+        margin-bottom: 2rem !important;
+    }
+
+    .pictures2-section {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+    }
+
+    .pictures2-item {
+        height: 50vw !important;
+        background-position-y: center;
+    }
 }
-/* for large screen lg (1024px) */
-@media (max-width: 1024px) {
+
+@media (min-width: 768px) {
+    .hidden {
+        display: none;
+    }
+    .triangle {
+        display: none;
+    }
+
+    .collapse{
+        flex-direction: row !important;
+    }
+    .collapse li {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+    }
+    .toggle-btn {
+        display: none;
+    }
     
 }
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Media Query %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
@@ -37,19 +158,20 @@ body {
     margin: 0;
 }
 
-ul {
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Menu Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.collapse{
     list-style-type: none;
     display: flex;
+    flex-direction: column;
     justify-content: right;
     align-items: center;
 }
-
-li {
-    padding-left: 1em;
-    padding-right: 1em;
+.collapse li {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Menu Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .nav {
     position: absolute;
     top: 0;
@@ -89,6 +211,13 @@ li {
     outline: none;
     border: none;
 }
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Menu Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hero Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
@@ -96,6 +225,7 @@ li {
     background-image: url(/images/desktop/image-header.jpg);
     background-position: center;
     background-size: cover;
+    height: 100vh;
     width: 100%;
     padding-top: 8rem;
     text-align: center;
@@ -352,7 +482,7 @@ li {
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Footer Section %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .footer {
     background-color: #90d4c5;
-    padding-top: 5rem;
+    padding-top: 4rem;
     font-size: 11px; 
     text-align: center;
     font-family: var(--font-barlow);
@@ -365,6 +495,7 @@ li {
 
 .sunnyside-logo {
     fill: var(--dark-moderate-cyan);
+    padding-bottom: 1rem;
 }
 
 .footer > * {
@@ -378,19 +509,16 @@ li {
 
 .footer .p-socials > * {
     font-size: 18px;
+    
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
-
-.footer ul {
-    justify-content: center;
-    margin: 0;
+.footer .p-socials {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
-.footer li{
-    padding: 0;
-}
 
 .footer a { 
     color: var(--dark-moderate-cyan);
